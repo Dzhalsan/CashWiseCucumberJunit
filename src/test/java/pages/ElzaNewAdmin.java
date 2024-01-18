@@ -22,11 +22,11 @@ public class ElzaNewAdmin {
     @FindBy(xpath = "//input[@name='password']")
     public WebElement logInPassword;
 
-
     @FindBy(xpath = "(//button[@type='submit'])[2]")
     public WebElement confirmSignInBtn;
 
-    @FindBy(xpath = "//p[text()='Admin Codewise']")
+
+    @FindBy(xpath = "//p[text()='hello hello']")
     public WebElement adminCodewiseBtn;
 
     @FindBy(xpath = "//button[text()='Create account']")
@@ -51,15 +51,21 @@ public class ElzaNewAdmin {
     @FindBy(xpath = "//input[@name='repeat_password']")
     public WebElement repeatPassword;
 
-    @FindBy(xpath = "//input[@value='CASHIER']")
-    public WebElement cashier;
+    @FindBy(xpath = "//input[@value='ACCOUNTANT']")
+    public WebElement accountant;
 
     @FindBy(xpath = "//button[text()='Create']")
     public WebElement createBtn;
 
-    @FindBy(xpath = "//li[text()='Log out']")
-    public WebElement logOut;
+    @FindBy(xpath = "//p[text()='Please enter a valid email address']")
+    public WebElement note;
 
-    @FindBy(xpath = "//button[text()='Log out']")
-    public WebElement confirmLogOut;
+    @FindBy(xpath = "//p[text()='Password must be at least 6 characters']")
+    public WebElement note2;
+
+    @FindBy(xpath = "//div[text()='Account successfully created']")
+    public WebElement notification;
+
+    @FindBy(xpath = "//input[@value='CASHIER']")
+    public WebElement cashier;
 }
