@@ -1,4 +1,4 @@
-package BegimaiTests;
+package step_definitions;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.Begimai_page;
 import utilities.Driver;
 
 import java.util.Map;

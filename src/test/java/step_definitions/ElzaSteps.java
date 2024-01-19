@@ -2,12 +2,19 @@ package step_definitions;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ElzaNewAdmin;
 import pages.SalesPage;
 import utilities.Driver;
+import utilities.UtilWait;
+
+import java.sql.Time;
+import java.time.Duration;
 
 public class ElzaSteps {
 
@@ -28,7 +35,7 @@ public class ElzaSteps {
     public void user_clicks_on_email_line_and_delete_previous_users_credential() {
         elzaNewAdmin.logInEmail.click();
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+        actions.keyDown(Keys.CONTROL).keyDown("a").keyDown(Keys.DELETE).keyUp("a").keyUp(Keys.CONTROL).keyUp(Keys.DELETE).perform();
 
     }
     @Then("user add correct {string}")
@@ -40,7 +47,7 @@ public class ElzaSteps {
     public void user_clicks_on_password_line_and_delete_previous_users_credential() {
         elzaNewAdmin.logInPassword.click();
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+       actions.keyDown(Keys.CONTROL).keyDown("a").keyDown(Keys.DELETE).keyUp("a").keyUp(Keys.CONTROL).keyUp(Keys.DELETE).perform();
     }
     @Then("user insert correct {string}")
     public void user_insert_correct(String password) {
@@ -103,7 +110,7 @@ public class ElzaSteps {
     public void user_add_with_correct_credentials(String email) {
         elzaNewAdmin.email.click();
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+       actions.keyDown(Keys.CONTROL).keyDown("a").keyDown(Keys.DELETE).keyUp("a").keyUp(Keys.CONTROL).keyUp(Keys.DELETE).perform();
         elzaNewAdmin.email.sendKeys(email);
     }
 
@@ -111,14 +118,14 @@ public class ElzaSteps {
     public void user_add_digits(Integer int1, String password) {
         elzaNewAdmin.password.click();
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+        actions.keyDown(Keys.CONTROL).keyDown("a").keyDown(Keys.DELETE).keyUp("a").keyUp(Keys.CONTROL).keyUp(Keys.DELETE).perform();
         elzaNewAdmin.password.sendKeys(password);
     }
     @Then("user confirm {int} digits {string}")
     public void user_confirm_digits(Integer int1, String pass) {
         elzaNewAdmin.repeatPassword.click();
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+        actions.keyDown(Keys.CONTROL).keyDown("a").keyDown(Keys.DELETE).keyUp("a").keyUp(Keys.CONTROL).keyUp(Keys.DELETE).perform();
         elzaNewAdmin.repeatPassword.sendKeys(pass);
     }
     @Then("user should not be able to create account, must see note {string}")
@@ -133,7 +140,8 @@ public class ElzaSteps {
 
     @Then("user should be able to create accountant profile and see the notification {string}")
     public void user_should_be_able_to_create_accountant_profile(String note3) {
-     Assert.assertEquals(note3, elzaNewAdmin.notification.getText());
+
+        Assert.assertEquals(note3, elzaNewAdmin.notification.getText());
 
     }
 
@@ -141,14 +149,14 @@ public class ElzaSteps {
     public void user_again_add_pass(String pass4) {
         elzaNewAdmin.password.click();
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+        actions.keyDown(Keys.CONTROL).keyDown("a").keyDown(Keys.DELETE).keyUp("a").keyUp(Keys.CONTROL).keyUp(Keys.DELETE).perform();
         elzaNewAdmin.password.sendKeys(pass4);
     }
     @Then("user again confirm {string}")
     public void user_again_confirm(String confPass) {
         elzaNewAdmin.repeatPassword.click();
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.COMMAND).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.COMMAND).perform();
+        actions.keyDown(Keys.CONTROL).keyDown("a").keyDown(Keys.DELETE).keyUp("a").keyUp(Keys.CONTROL).keyUp(Keys.DELETE).perform();
         elzaNewAdmin.repeatPassword.sendKeys(confPass);
     }
 
