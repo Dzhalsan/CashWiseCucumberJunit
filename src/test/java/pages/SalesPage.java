@@ -128,6 +128,15 @@ public class SalesPage {
     @FindBy(xpath = "//button[text()='Archive']")
     public WebElement archiveButton;
 
+    @FindBy(xpath = "//*[text()='Invoice created successfully']")
+    public WebElement invoiceCreatedSuccess;
+
+    @FindBy(xpath = "(//input[@placeholder='dd.mm.yy'])[2]")
+    public WebElement payUntil;
+
+    @FindBy(xpath = "//textarea[@placeholder='Write description']")
+    public WebElement writeDescription;
+
 
     /**
      * below are methods related to the Sales page
