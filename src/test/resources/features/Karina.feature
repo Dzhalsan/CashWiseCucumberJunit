@@ -1,7 +1,14 @@
-Feature: Verify if user is able to accept payment
+Feature: Verify if user is able to create and accept payment
 
   Background:
     Given  User logs in Cashwise account
+
+
+  Scenario: Create Invoice
+    Given user clicks to create invoice button
+    Then user enters all the valid fields
+    And user have to select product or service
+    And user clicks to save  button
 
     Scenario:Verify accept payment method
       Given user clicks on Accept payment button
