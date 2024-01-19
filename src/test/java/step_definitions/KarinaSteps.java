@@ -13,7 +13,7 @@ public class KarinaSteps {
     WebDriver driver = new ChromeDriver();
     KarinaPage karinaPage = new KarinaPage(driver);
 
-    @Given("user logs in Cashwise account")
+    @Given("User logs in Cashwise account")
     public void user_logs_in_cashwise_account() throws InterruptedException {
 
         driver.get(" https://www.cashwise.us/main");

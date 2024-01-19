@@ -1,7 +1,7 @@
 Feature: Verify if user is able to accept payment
 
   Background:
-    Given  user logs in Cashwise account
+    Given  User logs in Cashwise account
 
     Scenario:Verify accept payment method
       Given user clicks on Accept payment button
