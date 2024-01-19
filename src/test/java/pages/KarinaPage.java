@@ -90,30 +90,51 @@ public class KarinaPage {
     public  WebElement saveButton;
 
     @FindBy (xpath = "(//button[@class='MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root sc-iqcoie fOawlg not-paid css-4t6ilf'])[1]")
-    public  WebElement acceptPayment;
+    public static WebElement acceptPayment;
 
 
     @FindBy (xpath = "//input[@placeholder='File title']")
     public  WebElement fileTitle;
 
     @FindBy (id = "mui-component-select-type_of_pay")
-    public WebElement selectPaymentMethod;
+    public static WebElement selectPaymentMethod;
 
 
     @FindBy (xpath = "(//li[@class='MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root css-1msxoye'])[1]")
     public WebElement cash;
 
     @FindBy (id = "mui-component-select-bank_account")
-    public  WebElement toWhichCheck;
+    public static WebElement toWhichCheck;
 
     @FindBy( xpath = "//li[@class='MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root css-1msxoye']")
     public WebElement jj;
 
     @FindBy( name = "comment")
-    public WebElement comment;
+    public static WebElement comment;
 
     @FindBy (xpath = "//button[@class='MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-7467wi']")
-    public WebElement saveButton2;
+    public static WebElement saveButton2;
+
+    @FindBy (xpath = "(//li[@class='MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root css-1msxoye'])[2]")
+    public static WebElement bank;
+
+    @FindBy (xpath = "//button[@class='MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-mlwm8n']")
+    public static WebElement CreateNewCheck;
+
+    @FindBy (xpath = "(//input[@class='MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[2]")
+    public static WebElement title;
+
+    @FindBy (xpath = "(//input[@class='MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[3]")
+    public static WebElement balance;
+
+    @FindBy (xpath = "(//input[@class='MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputSizeSmall css-1o6z5ng'])[1]")
+    public static WebElement Description;
+
+    @FindBy (xpath = "//button[@class='MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1nupmx9']")
+    public static WebElement SaveNewCheck;
+
+    @FindBy( xpath = "(//li[@class='MuiMenuItem-root MuiMenuItem-gutters MuiButtonBase-root css-1msxoye'])[2]")
+    public static WebElement paid;
 
 
 }
